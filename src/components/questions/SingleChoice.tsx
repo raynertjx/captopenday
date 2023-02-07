@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
 export default function SingleChoice(props) {
   const [choice, setChoice] = useState<number>(-1);
+  const selfRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (selfRef.current !== null) {
+      selfRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   function next() {
     // Log choices
@@ -13,10 +19,15 @@ export default function SingleChoice(props) {
     props.next();
   }
 
+  function prev() {
+    props.prev();
+  }
+
   return (
     <div
       id={"question-" + props.questionNumber}
-      className="w-full flex flex-col items-center p-4"
+      className="w-full flex flex-col items-center justify-center p-4 min-h-screen"
+      ref={selfRef}
     >
       <div className="question">
         <h2 className="text-2xl font-semibold my-8">{props.question}</h2>
@@ -34,8 +45,9 @@ export default function SingleChoice(props) {
             ))}
         </div>
 
-        <div className="flex flex-row-reverse mt-12">
-          <Button onClick={next} label="Next" className="self-end" />
+        <div className="flex flex-row mt-12 justify-between">
+          <Button onClick={prev} label="Back" />
+          <Button onClick={next} label="Next" />
         </div>
       </div>
     </div>
