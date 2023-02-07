@@ -1,0 +1,13 @@
+body {
+  background-size: 100% auto;
+  background-image: url(./assets/sunset.png);
+  background-repeat: no-repeat;
+  font-family: Montserrat;
+  background-color: black;
+  color: white;
+}
+
+.question {
+  max-width: 90%;
+  width: 60rem;
+}
