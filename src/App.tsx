@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import NavBar from './components/NavBar'
-import Banner from './components/Banner'
-import Cards from './components/Cards'
-import Quiz from './components/Quiz'
-import './App.css'
+import "./App.css";
+import Banner from "./components/Banner";
+import NavBar from "./components/NavBar";
+import Quiz from "./components/Quiz";
 
 export default function MyApp() {
-  return (
-    <div className="w-full">
-      <NavBar />
-      <Banner />
-      <Quiz />
-    </div>
-  );
+    return (
+        <div className="w-full">
+            <NavBar />
+            <Banner />
+            <Quiz />
+        </div>
+    );
 }
