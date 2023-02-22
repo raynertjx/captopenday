@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import Start from "./questions/Start";
 import MultiChoice from "./questions/MultiChoice";
 import SingleChoice from "./questions/SingleChoice";
+import Finish from "./questions/Finish";
 
 export default function Quiz() {
   const [questionNumber, setQuestionNumber] = useState<number>(0);
@@ -42,6 +43,7 @@ export default function Quiz() {
     {
       question: "What is your favourite colour?",
       choices: ["Blue", "Green", "Yellow", "Black", "Red"],
+      titles: ["Roc", "Dragon", "Garuda", "Tulpar", "Phoenix"],
     },
     {
       question: "What do you like to do during your free time?",
@@ -53,6 +55,14 @@ export default function Quiz() {
         "Cooking and Baking",
         "Explore a different activity!",
       ],
+      titles: [
+        "Sports",
+        "Arts and Craft",
+        "Dancing",
+        "Enjoying music",
+        "Cooking and Baking",
+        "Etc.",
+      ],
     },
     {
       question:
@@ -63,10 +73,24 @@ export default function Quiz() {
         "Beyond Borders: Migrants",
         "Inside the Museum",
       ],
+      titles: [
+        "Pursuit of Happiness",
+        "Bioethics in the 21st Century",
+        "Beyond Borders: Migrants",
+        "Inside the Museum",
+      ],
     },
     {
       question: "Pick a community you want to engage with!",
       choices: [
+        "Deaf Community",
+        "Underprivileged Elderly",
+        "Foster Children",
+        "Animals",
+        "Migrants",
+        "Explore a different community!",
+      ],
+      titles: [
         "Deaf Community",
         "Underprivileged Elderly",
         "Foster Children",
@@ -110,6 +134,10 @@ export default function Quiz() {
         </div>
       ))
     );
+
+    if (maxQuestionNumber >= len + questions.length) {
+      elements.push(<Finish key="finish" answers={answers} questions={questions} />)
+    }
 
     return elements;
   }
