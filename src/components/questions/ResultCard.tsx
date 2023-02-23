@@ -1,6 +1,4 @@
 export default function ResultCard(props) {
-  console.log(props.links);
-  console.log(props);
 
   return (
     <div className="h-96 w-64 border bg-white rounded-lg mx-4 mt-8 flex flex-col justify-center">
