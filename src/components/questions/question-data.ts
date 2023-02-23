@@ -44,11 +44,11 @@ export const questions = [
     ],
     images: [
       "sports.jpg",
-      "clubsocs.jpg",
-      "clubsocs.jpg",
-      "clubsocs.jpg",
-      "clubsocs.jpg",
-      "curious.jpg",
+      "clubsocs.JPG",
+      "clubsocs.JPG",
+      "clubsocs.JPG",
+      "clubsocs.JPG",
+      "curious.JPG",
     ],
     links: [
       [{ label: "CAPT Sports", url: "https://captlife.com/life/sports/" }, { label: "Sports Committee", url: "https://captlife.com/csc/sports/" }],
@@ -101,7 +101,7 @@ export const questions = [
       "blank.jpg",
       "blank.jpg",
       "migrants.jpg",
-      "blank.jpg",
+      "si.jpg",
     ],
     links: [
       [{ label: "CAPT in Silence", url: "https://www.instagram.com/captinsilence/" }, { label: "Other CE Projects", url: "https://captlife.com/life/ace-projects/" }],
