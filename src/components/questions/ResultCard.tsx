@@ -10,13 +10,13 @@ export default function ResultCard(props) {
         </div>
       )}
       <img
-        className="w-48 h-48 mx-auto rounded"
+        className="w-48 h-48 mx-auto rounded-lg"
         src={`/img/${props.image}`}
         alt=""
       />
       <div className="flex flex-col gap-y-1 mt-2">
         {props.links.map((x) => (
-          <a href={x.url}>
+          <a href={x.url} target="_blank">
             <div className="bg-black text-white text-sm max-w-fit py-2 px-3 rounded mx-auto rounded-2xl" style={{backgroundColor: "hsla(337, 75%, 28%, 1)"}}>
               {x.label}
             </div>
