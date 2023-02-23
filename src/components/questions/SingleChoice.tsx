@@ -12,7 +12,7 @@ export default function SingleChoice(props) {
 
   function next() {
     // Log choices
-    props.logAnswer(props.questionNumber, props.choices[choice]);
+    props.logAnswer(props.questionNumber, choice);
     // Clear choices
     // setChoice(-1);
     // Go to next question
