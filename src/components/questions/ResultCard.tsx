@@ -9,7 +9,7 @@ export default function ResultCard(props) {
       )}
       <img
         className="w-48 h-48 mx-auto rounded-lg"
-        src={`/img/${props.image}`}
+        src={`img/${props.image}`}
         alt=""
       />
       <div className="flex flex-col gap-y-1 mt-2">
