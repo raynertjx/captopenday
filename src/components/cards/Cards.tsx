@@ -29,7 +29,7 @@ export default function Cards() {
                     id={2}
                     img_url="/img/housecomm.jpeg"
                     alt="houses"
-                    link="https://captlife.com/roc-neighbourhood-page/"
+                    link="https://captlife.com/neighbourhoods/"
                     button_text="Explore CAPT's Houses"
                 />
                 <CardItem
