@@ -40,14 +40,15 @@ export default function SingleChoice(props) {
                 key={x}
                 label={x}
                 isSelected={choice == i}
+                isDisabled={false}
                 onClick={() => setChoice(i)}
               />
             ))}
         </div>
 
         <div className="flex flex-row mt-12 justify-between">
-          <Button onClick={prev} label="Back" />
-          <Button onClick={next} label="Next" />
+          <Button onClick={prev} isDisabled={false} label="Back" />
+          <Button onClick={next} isDisabled={choice === -1} label="Next" />
         </div>
       </div>
     </div>
