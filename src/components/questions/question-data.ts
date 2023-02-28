@@ -17,11 +17,11 @@ export const questions = [
       "PHOENIX.png",
     ],
     links: [
-      [{ label: "Explore Roc Here", url: "#" }],
-      [{ label: "Explore Dragon Here", url: "#" }],
-      [{ label: "Explore Garuda Here", url: "#" }],
-      [{ label: "Explore Tulpar Here", url: "#" }],
-      [{ label: "Explore Phoenix Here", url: "#" }],
+      [{ label: "Explore Roc Here", url: "https://captlife.com/roc-neighbourhood-page/" }],
+      [{ label: "Explore Dragon Here", url: "https://captlife.com/dragon-neighbourhood-page/" }],
+      [{ label: "Explore Garuda Here", url: "https://captlife.com/garuda-neighbourhood-page/" }],
+      [{ label: "Explore Tulpar Here", url: "https://captlife.com/tulpar-neighbourhood-page/" }],
+      [{ label: "Explore Phoenix Here", url: "https://captlife.com/phoenix-neighbourhood-page/" }],
     ],
   },
   {
