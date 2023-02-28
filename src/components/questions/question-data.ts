@@ -101,7 +101,7 @@ export const questions = [
       "blank.jpg",
       "blank.jpg",
       "migrants.jpg",
-      "si.jpg",
+      "si.JPG",
     ],
     links: [
       [{ label: "CAPT in Silence", url: "https://www.instagram.com/captinsilence/" }, { label: "Other CE Projects", url: "https://captlife.com/life/ace-projects/" }],

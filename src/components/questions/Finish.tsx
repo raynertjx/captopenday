@@ -3,13 +3,17 @@ import { useEffect, useRef } from "react";
 import ResultCard from "./ResultCard";
 import { db } from "../../firebase-config"
 
-async function uploadData(answers) {
+async function uploadData(answers, answerTimes) {
   await addDoc(collection(db, "quiz_data"), {
-    time: Date.now(),
+    submit_time: Date.now(),
     colour_ans: answers[1],
+    colour_time: answerTimes[1],
     free_ans: answers[2],
+    free_time: answerTimes[2],
     book_ans: answers[3],
+    book_time: answerTimes[3],
     com_ans: answers[4],
+    com_time: answerTimes[4],
   })
 }
 
@@ -24,7 +28,7 @@ export default function Finish(props) {
   // Upload results
   useEffect(() => {
     if (props.answers !== null) {
-      uploadData(props.answers)
+      uploadData(props.answers, props.answerTimes)
     }
   }, []);
 

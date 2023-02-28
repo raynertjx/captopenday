@@ -9,6 +9,7 @@ export default function Quiz() {
   const [questionNumber, setQuestionNumber] = useState<number>(0);
   const [maxQuestionNumber, setMaxQuestionNumber] = useState<number>(0);
   const [answers, setAnswers] = useState<Record<string, any>>({});
+  const [answerTimes, setAnswerTimes] = useState<Record<string, any>>({});
   const questionRefs = useRef<Record<number, HTMLElement | null>>({});
 
   function nextQuestion(questionNumber: number) {
@@ -37,7 +38,10 @@ export default function Quiz() {
   function logAnswer(questionNumber: number, answer: any) {
     let copy: Record<string, any> = { ...answers };
     copy[questionNumber] = answer;
+    let copyTimes: Record<string, any> = { ...answerTimes };
+    copyTimes[questionNumber] = Date.now();
     setAnswers(copy);
+    setAnswerTimes(copyTimes);
   }
 
   function renderQuestions(questionNumber: number, maxQuestionNumber: number) {
@@ -75,7 +79,7 @@ export default function Quiz() {
     );
 
     if (maxQuestionNumber >= len + questions.length) {
-      elements.push(<Finish key="finish" answers={answers} questions={questions} />)
+      elements.push(<Finish key="finish" answers={answers} answerTimes={answerTimes} questions={questions} />)
     }
 
     return elements;
